@@ -1,7 +1,7 @@
 # K8s-Control-Plane
 Configuração do kubernetes, vamos utilizar o K8s para criar um control plane em nosso ambiente On-premise (Linux Ubunto).
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/381303b0-e017-41a7-a481-69c0aeaba67a/e3351d16-fc1b-4660-856d-5e65266b990d/Untitled.png)
+![Untitled]([https://prod-files-secure.s3.us-west-2.amazonaws.com/381303b0-e017-41a7-a481-69c0aeaba67a/e3351d16-fc1b-4660-856d-5e65266b990d/Untitled.png](https://drive.google.com/file/d/1Mali7RrUv3JT5KeXnBhqTY3bZ5rLv2MI/view))
 
 ### Segue a configuração padrão para todas as maquinas
 
