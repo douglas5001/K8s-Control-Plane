@@ -64,7 +64,6 @@ Interessante que você tenha um server como o por exemplo o meu que é uma VPS U
     (NO MEU CASO UTILIZO UMA VPS NA CONTABO, A CONFIGURAÇÂO DEIXEI A PADRAO)
     
     ```
-    yamlCopy code
     network:
       version: 2
       ethernets:
