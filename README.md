@@ -28,7 +28,7 @@ Interessante que você tenha um server como o por exemplo o meu que é uma VPS U
     
     Após intalar, vamos criar o arquivo a seguir. Crie o arquivo **`/etc/containerd/config.toml`** com o seguinte conteúdo:
     
-    ```python
+```
    [plugins."io.containerd.grpc.v1.cri"]
      disable_tcp_service = true
      disable_cgroups = false
@@ -52,8 +52,8 @@ Interessante que você tenha um server como o por exemplo o meu que é uma VPS U
    [plugins."io.containerd.grpc.v1.snapshots"]
      default = "overlayfs"
 ```
-    
-    Reinicie o ContainerD
+
+Reinicie o ContainerD
     
     ```
     sudo systemctl restart containerd
