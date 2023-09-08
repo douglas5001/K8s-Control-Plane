@@ -28,27 +28,30 @@ Interessante que você tenha um server como o por exemplo o meu que é uma VPS U
     
     Após intalar, vamos criar o arquivo a seguir. Crie o arquivo **`/etc/containerd/config.toml`** com o seguinte conteúdo:
     
-    ```
-    [plugins."io.containerd.grpc.v1.cri"]
-      disable_tcp_service = true
-      disable_cgroups = false
-      stream_server_address = "127.0.0.1"stream_server_port = "10010"stream_idle_timeout = "4h0m0s"enable_selinux = false
-      selinux_category_range = 1024
-      enable_apparmor = false
-      sandbox_image = "k8s.gcr.io/pause:3.4.1"
-    
-    [plugins."io.containerd.grpc.v1.cni"]
-      network_dir = "/etc/cni/net.d"max_conflict = 0
-    
-    [plugins."io.containerd.grpc.v1.containerd"]
-      shim_debug = false
-    
-    [plugins."io.containerd.grpc.v1.diff"]
-      default = "native"
-    
-    [plugins."io.containerd.grpc.v1.snapshots"]
-      default = "overlayfs"
-    ```
+    ```python
+[plugins."io.containerd.grpc.v1.cri"]
+  disable_tcp_service = true
+  disable_cgroups = false
+  stream_server_address = "127.0.0.1:10010"  # Correção aqui
+  stream_idle_timeout = "4h0m0s"
+  enable_selinux = false
+  selinux_category_range = 1024
+  enable_apparmor = false
+  sandbox_image = "k8s.gcr.io/pause:3.4.1"
+
+[plugins."io.containerd.grpc.v1.cni"]
+  network_dir = "/etc/cni/net.d"
+  max_conflict = 0
+
+[plugins."io.containerd.grpc.v1.containerd"]
+  shim_debug = false
+
+[plugins."io.containerd.grpc.v1.diff"]
+  default = "native"
+
+[plugins."io.containerd.grpc.v1.snapshots"]
+  default = "overlayfs"
+```
     
     Reinicie o ContainerD
     
